@@ -28,6 +28,7 @@ from .embeddings import Embeddings
 from .image_classification import ImageClassification
 from .image_segmentation import ImageSegmentation
 from .object_detection import ObjectDetection
+from .fill_mask import MaskGeneration
 from .sentence_similarity import SentenceSimilarity
 from .sentiment import Sentiment
 from .summarization import Summarization
@@ -101,6 +102,7 @@ def get_frontend(
             ImageClassification,
             ObjectDetection,
             ImageSegmentation,
+            MaskGeneration,
         ]:
             tabs |= add_tab(
                 ui_class, client_stub, service_prefix, desc_pool, module_models

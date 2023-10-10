@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License
 
+
+# Standard
+from typing import List
+
 # Local
 from caikit.core import DataObjectBase
 from caikit.core.data_model import dataobject
@@ -22,3 +26,19 @@ class Text(DataObjectBase):
     """Result text string"""
 
     text: str
+
+@dataobject
+class MaskScore(DataObjectBase):
+    """Result text string"""
+
+    score: float
+    token: int
+    token_str: str
+    sequence: str
+
+@dataobject
+class MaskScoreResult(DataObjectBase):
+    """The result of object-detection inference."""
+
+    objects: List[MaskScore]
+

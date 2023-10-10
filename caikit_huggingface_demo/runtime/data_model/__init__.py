@@ -17,4 +17,4 @@ from .classification import ClassificationPrediction, ClassInfo
 from .embeddings import Result
 from .image_segmentation import ImageSegmentationResult, Mask
 from .object_detection import Box, ObjectDetected, ObjectDetectionResult
-from .results import Text
+from .results import Text, MaskScore, MaskScoreResult
